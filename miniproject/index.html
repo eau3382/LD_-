@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>임상심리사 2급 기출문제</title>
+    <link rel="stylesheet" href="styles.css"> <!-- CSS 파일 링크 -->
+</head>
+<body>
+    <header>
+        <h1>임상심리사 2급 (2024년 3회 기출문제)</h1>
+        <h2>2과목 : 이상심리학</h2>
+        <div class="timer" id="timer">⏳ 남은 시간: <span id="time-remaining">5분 00초</span></div>
+    </header>
+
+    <main>
+        <div class="content-container">
+            <div class="question-container">
+                <div class="question" id="question-container">
+                    <p id="question-text">1. 사랑의 삼각형 이론에서 사랑의 3가지 요소에 포함되지 않는 것은? <span class="difficulty">(난이도 *)</span></p>
+                </div>
+                <div class="options" id="options-container">
+                    <!-- 문제 옵션은 JavaScript로 동적으로 추가 -->
+                </div>
+                <div id="feedback"></div>
+                <div id="explanation">
+                    <!-- 해설은 JavaScript로 동적으로 추가 -->
+                </div>
+                <div class="navigation-buttons">
+                    <div class="left-buttons">
+                        <button class="explanation-button" onclick="toggleExplanation()">해설</button>
+                        <button class="reset-button" onclick="resetQuestion()">다시풀기</button>
+                    </div>
+                    <div class="right-buttons">
+                        <button class="prev-button" onclick="prevQuestion()">이전</button>
+                        <button class="next-button" id="next-button" onclick="nextQuestion()">다음</button>
+                        <button class="complete-button" id="complete-button" onclick="showResults()" style="display: none;">완료</button>
+                    </div>
+                </div>
+            </div>
+            <div class="question-navigation">
+                <ul>
+                    <li onclick="goToQuestion(0)">문제 1</li>
+                    <li onclick="goToQuestion(1)">문제 2</li>
+                    <li onclick="goToQuestion(2)">문제 3</li>
+                    <li onclick="goToQuestion(3)">문제 4</li>
+                    <li onclick="goToQuestion(4)">문제 5</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script> <!-- JavaScript 파일 링크 -->
+</body>
+</html>
