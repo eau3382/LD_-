@@ -24,7 +24,6 @@ header h2 {
     font-size: 18px;
 }
 
-
 main {
     margin-top: 140px;
     padding: 20px;
@@ -181,6 +180,13 @@ main {
     background-color: #3498db;
     color: white;
     border: none;
+}
+
+/* 비활성화된 이전 버튼 스타일 */
+.navigation-buttons .prev-button:disabled {
+    background-color: #ccc; /* 비활성화된 버튼 색상 */
+    color: #666; /* 비활성화된 텍스트 색상 */
+    cursor: not-allowed; /* 비활성화된 커서 모양 */
 }
 
 .navigation-buttons .complete-button {
