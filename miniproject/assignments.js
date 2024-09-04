@@ -56,10 +56,10 @@ const questions = [
 ];
 
 function startSubject(subjectNumber) {
-    if (subjectNumber === 3) {
+    if (subjectNumber === 2) {
         document.getElementById('subject-selection').style.display = 'none';
-        document.querySelector('header h1').textContent = "3과목 : 이상심리학";
-        document.querySelector('header').style.backgroundColor = '#1a4888'; // 3과목 색상으로 변경
+        document.querySelector('header h1').textContent = "제2과목 : 이상심리학";
+        document.querySelector('header').style.backgroundColor = '#1a4888'; // 2과목 색상으로 변경
         document.getElementById('quiz-content').style.display = 'block';
         loadQuestion();
     } else {
