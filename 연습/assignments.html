@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>임상심리사 2급 기출문제</title>
+    <link rel="stylesheet" href="styles.css"> <!-- CSS 파일 링크 -->
+</head>
+<body>
+    <header>
+        <h1 onclick="resetQuiz()">임상심리사 2급 기출문제(2023년 1회)</h1>
+    </header>
+
+    <!-- 과목 선택 화면 -->
+    <div id="subject-selection" class="subjects">
+        <button onclick="startSubject(1)">📘 제1과목 : 심리학개론</button>
+        <button onclick="startSubject(2)">💬 제2과목 : 이상심리학</button>
+        <button onclick="startSubject(3)">🔍 제3과목 : 심리검사</button>
+        <button onclick="startSubject(4)">🧠 제4과목 : 임상심리학</button>
+        <button onclick="startSubject(5)">📊 제5과목 : 심리상담</button>
+    </div>
+
+    <!-- 문제 화면 -->
+    <main id="quiz-content" style="display: none;">
+        <div class="content-container">
+            <div class="question-container">
+                <div class="question" id="question-container">
+                    <p id="question-text"></p>
+                </div>
+                <div class="options" id="options-container">
+                    <!-- 문제 옵션은 JavaScript로 동적으로 추가 -->
+                </div>
+                <div id="feedback"></div>
+                <div id="explanation">
+                    <!-- 해설은 JavaScript로 동적으로 추가 -->
+                </div>
+                <div class="navigation-buttons">
+                    <div class="left-buttons">
+                        <button class="explanation-button" onclick="toggleExplanation()">해설</button>
+                        <button class="reset-button" onclick="resetQuestion()">다시풀기</button>
+                    </div>
+                    <div class="right-buttons">
+                        <button class="prev-button" id="prev-button" onclick="prevQuestion()">이전</button>
+                        <button class="next-button" id="next-button" onclick="nextQuestion()">다음</button>
+                        <button class="complete-button" id="complete-button" onclick="showResults()" style="display: none;">완료</button>
+                    </div>
+                </div>
+            </div>
+            <div class="question-navigation">
+                <ul>
+                    <li onclick="goToQuestion(0)">문제 1</li>
+                    <li onclick="goToQuestion(1)">문제 2</li>
+                    <li onclick="goToQuestion(2)">문제 3</li>
+                    <li onclick="goToQuestion(3)">문제 4</li>
+                    <li onclick="goToQuestion(4)">문제 5</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <script src="assignments.js"></script> <!-- JavaScript 파일 링크 -->
+</body>
+</html>
