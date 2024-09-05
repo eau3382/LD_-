@@ -363,26 +363,36 @@ const loadQuestion = () => {
 
 const checkAnswer = (label, isCorrect) => {
     const feedback = document.getElementById("feedback");
-    const emojis = isCorrect ? "🎉" : "❌";
 
+    // 기존의 체크 표시를 모두 제거하고 초기화 (동그라미, 엑스도 제거)
     document.querySelectorAll('.number').forEach(el => {
-        el.classList.remove('checked');
+        el.classList.remove('correct', 'incorrect');
+        el.innerHTML = el.innerHTML.replace(/🟢|❌/g, "");  // 기존 동그라미와 엑스 제거
     });
 
+    // 선택된 답의 span
     const numberSpan = label.querySelector('.number');
-    numberSpan.classList.add('checked');
-
+    
+    // 선택된 답변이 정답일 경우
     if (isCorrect) {
-        feedback.textContent = `정답입니다! ${emojis}`;
+        feedback.textContent = "정답입니다! 🎉";
         feedback.style.color = "green";
         score += 20;
+        numberSpan.classList.add('correct');  // 동그라미 표시
+        numberSpan.innerHTML = "🟢 " + numberSpan.innerHTML;  // 동그라미 추가
     } else {
-        feedback.textContent = `다시 생각해보세요. ${emojis}`;
+        feedback.textContent = "다시 생각해보세요. 😞";
         feedback.style.color = "red";
+        numberSpan.classList.add('incorrect');  // 엑스 표시
+        numberSpan.innerHTML = "❌ " + numberSpan.innerHTML;  // 엑스 추가
     }
 
-    answered = true;  // 이 부분이 중요합니다.
+    answered = true;  // 답변 완료 표시
 };
+
+
+
+
 
 const toggleExplanation = () => {
     const explanation = document.getElementById("explanation");

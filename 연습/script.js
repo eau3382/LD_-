@@ -28,9 +28,13 @@ document.addEventListener('DOMContentLoaded', () => {
             // 클릭한 것만 열기
             if (!isActive) {
                 accordionContent.style.display = 'block';
+
+                // 자격증 클릭 시 화면을 해당 자격증 항목으로 스크롤되도록 설정
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
             }
         });
     });
 });
-
-

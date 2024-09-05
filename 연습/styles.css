@@ -5,12 +5,15 @@ body {
     color: #333;
     margin: 0;
     padding: 0;
+    overflow-y: scroll; /* 스크롤 가능하게 설정 */
+    overflow-y: scroll;
+    padding-top: 150px; /* 헤더 높이만큼 여백 추가 */
 }
 
 .dropdown-container {
     width: 100%;
     max-width: 600px;
-    margin: 50px auto;
+    margin: auto;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -103,6 +106,7 @@ body {
     justify-content: center; /* 가로로 가운데 정렬 */
     align-items: center; /* 세로로 가운데 정렬 */
     height: 100vh; /* 뷰포트 높이를 100%로 설정 */
+    /* padding-top: 100px; 헤더 고정에 대한 여백 추가 */
 }
 
 header {
@@ -113,9 +117,8 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
-    height: auto;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
+    z-index: 9999;
 }
 
 header h1 {
@@ -132,7 +135,8 @@ header h1 {
     justify-content: center; /* 세로 가운데 정렬 */
     align-items: center; /* 가로 가운데 정렬 */
     height: 80vh; /* 전체 화면 높이의 80%를 사용하여 화면 중앙에 위치 */
-    margin-top: 60px; /* 제목과의 간격을 조금 더 두기 위해 사용 */
+    padding-top: 120px; /* 제목(header)와 겹치지 않도록 여백 추가 */
+    margin-top: 0; /* margin 대신 padding으로 여백 처리 */
 }
 
 
@@ -166,7 +170,8 @@ main {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: 100%;
     height: auto;
-    margin-top: 100px; /* 헤더와의 간격을 조정 */
+    padding-top: 120px; /* 제목(header)와 겹치지 않도록 여백 추가 */
+    margin-top: 0; /* margin 대신 padding으로 여백 처리 */
 }
 
 
@@ -321,4 +326,12 @@ main {
     background-color: #2ecc71;
     color: white;
     border: none;
+}
+
+.correct {
+    color: green; /* 정답 동그라미 색 */
+}
+
+.incorrect {
+    color: red; /* 오답 엑스 색 */
 }
